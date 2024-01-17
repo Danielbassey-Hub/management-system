@@ -45,4 +45,10 @@ export class AuthController {
       return await this.authService.findUsers()
     }
 
+    @UseGuards(AuthGuard())
+    @Get('userprofile')
+    async profile(@Req() req:Request){
+      return req.user
+    }
+
 }

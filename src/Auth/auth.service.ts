@@ -10,6 +10,9 @@ import {Request, Response}  from 'express';
 
 @Injectable()
 export class AuthService {
+  findUser() {
+    throw new Error("Method not implemented.");
+  }
 
   constructor ( 
     @InjectRepository(UserEntity) private userRepo: Repository<UserEntity>,
